@@ -1,0 +1,8 @@
+Question 3
+In the future it is expected that class ComputerEquipment will be extended with additional operations. The present structure of a computer equipment is assumed not to change. It is also not desired to ‘pollute’ all the existing component classes with new operations. 
+
+a) Which design pattern would be suitable for this problem?
+
+ANSWER:
+
+I would use Decorator pattern for the above problem as it allows a user to add new functionality to an existing object without altering its structure.This pattern creates a decorator class which wraps the original class and provides additional functionality keeping class methods signature intact.

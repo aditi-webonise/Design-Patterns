@@ -1,0 +1,19 @@
+Question 4
+A journal on PCs would like to investigate some properties of different PCs, e.g. the price, performance, etc. The results need to be sorted in a list. There are several sorting algorithms for sorting all the PCs depending on specific characteristics.  These sorting algorithms behave differently with respect to the time and space performance. Therefore, it is required to select and switch to a different sorting algorithm at run-time.
+
+a) Which design pattern can be applied to fulfil these requirements?
+b) Give a short pseudo-formal implementation which shows the switching between different sorting algorithms. Assume that you have already a list in which the performance values for each PC are given. 
+
+
+ANSWER:
+
+I would use Strategy design pattern for the above problem.
+In Strategy pattern, a class behavior can be changed at run time. In this, we create objects which represent various strategies and a context object whose behavior varies as per its strategy object. The strategy object changes the executing algorithm of the context object.
+
+Pseudo Code:
+
+1. First of all, create an interface Strategy which will contain method sort().
+2. Create concrete classes BubbleSort, MergeSort, QuickSort etc.
+3. Create a Context class which will have an executeStrategy() method.
+4. Use the Context to see change in behaviour when it changes its Strategy.
+ 

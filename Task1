@@ -1,0 +1,14 @@
+Question 1
+Assume that we would like to model a personal computer (PC). A PC consists of a cabinet, which includes a chassis. A chassis on its turn is composed of a bus, a floppy disk drive, a memory unit, a CPU, and a power supply. A bus incorporates a network card. We would like to treat all the equipment components in a uniform way. The basic operations needed are netPrice and powerConsumption, which return the net price and the power consumption of each component respectively. In addition, each component may have its own specific semantics.
+
+ANSWER:
+I would use composite design pattern for the above problem because  composite design pattern allows us to compose objects into tree structures to represent whole-part hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly. 
+In the above case, bus, floppy disc drive, memory unit, CPU and power supply all fall under chassis 
+which can be treated individually as well as in a composition.
+Pseudo Code:
+1. There will be an interface Operation. There will be two methods netPrice and powerConsumption in that interface.
+2. There will be one more interface Component.
+3. All the other equipment components like Bus, FloppyDiscDrive, MemoryUnit, CPU and PowerSupply will be classes implemented from the interface Component.
+5. NetworkCard class will be extended from the Bus class.
+6. To calculate Net Price of any component , I will call the netPrice method and the instance of Component interface will hold that result.
+7. To calculate Power Consumption of any component , I will call the powerConsumption method and the instance of Component interface will hold that result.

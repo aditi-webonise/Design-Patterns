@@ -1,0 +1,23 @@
+Question 2
+Clearly, we can have different configurations of PCs, for example a tower PC and a desktop PC. Furthermore, each type of PC may require specific components. We may have, for instance, specific cabinets and chassis for tower PCs and desktop PCs. Consequently, we assume that we will have a family of different products. This is illustrated in the next class hierarchies for cabinet and chassis. 
+
+There are actually two concerns here. First, we would like to ensure that a computer configuration always consists of parts that fit together. Second, we would not like to be bothered with details of the creation of computers.
+
+a) Which design pattern is applicable for this problem?
+b) Write a pseudo-code for the same
+
+ANSWER:
+
+I would use Abstract Factory design pattern for the above problem. 
+Abstract Factory provides an interface for creating families of related objects without specifying their concrete classes. A hierarchy that encapsulates many possible platforms and the construction of a suite of products. 
+According to the Abstract Factory design pattern, the factory object has the responsibility for providing creation services for the entire platform family. Clients never create platform objects directly, they ask the factory to do that for them which will ensure that computer configuration consists of parts that fit together.
+
+Pseudo Code:
+
+1. Create an interface Chassis.
+2. Create concrete classes TowerChassis and DesktopChassis implementing Chassis.
+3. Create an interface Cabinet.
+4. Create concrete classes TowerCabinet and DesktopCabinet implementing Cabinet.
+5. Create an abstract class AbstractFactory to get factories for Cabinet and Chassis Objects.
+6. Create Factory classes ChassisFactory and CabinetFactory extending AbstractFactory to generate object of concrete class based on given information.
+
